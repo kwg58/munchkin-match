@@ -52,9 +52,9 @@ function buildBoard() {
     divEnd = '</div>'
     quote = '" '
     divImgSrc = '<img src="' + imgSource + imgTile + '">';
-    // console.log(divStart + i + '">' + divImgSrc  +  divEnd);
+    console.log(divStart + i + '">' + divImgSrc  +  divEnd);
     // console.log("#buildhere")
-    // $('#buildhere').append(divStart + i + '">' + divImgSrc  +  divEnd);
+    $('#buildhere').append(divStart + i + '">' + divImgSrc  +  divEnd);
     // $('#fuck').append("<div>Whatever</div>");
   }
 }

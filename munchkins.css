@@ -13,28 +13,28 @@ body {
 #main > .left {
   margin: 4px;
   padding: 5px;
-  /*border: 1px solid #8888bb;
-  border-radius: 7pt;*/
+  /*border: 1px solid #8888bb;*/
+  /*border-radius: 7pt;*/
   /*background: #ccccff;*/
   flex: 1 6 20%;
   order: 1;
   /*border: 1px solid black;*/
 }
 #main > .center {
-  margin: 4px;
-  padding: 5px;
-  /*border: 1px solid #cccc33;
-  border-radius: 7pt;*/
+  /*margin: 4px;*/
+  /*padding: 5px;*/
+  /*border: 1px solid #cccc33;*/
+  /*border-radius: 7pt;*/
   /*background: #dddd88;*/
   flex: 3 1 50%;
   order: 2;
-  /*border: 1px solid red;*/
+  border: 1px solid red;
 }
 #main > .right {
   margin: 4px;
   padding: 5px;
-  /*border: 1px solid #8888bb;
-  border-radius: 27pt;*/
+  /*border: 1px solid #8888bb;*/
+  /*border-radius: 27pt;*/
   /*background: #ccccff;*/
   flex: 1 6 30%;
   order: 3;
@@ -46,9 +46,10 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 0 auto;
   /*flex-basis: 450px;*/
-  width: 450px;
-  height: 450px;
+  width: 408px;
+  height: 408px;
   /*border: 1px solid blue;*/
   /*margin: 10px;*/
 }
@@ -57,15 +58,18 @@ body {
 
 
 .normal {
-  background-image: url("./images/bc-100.png");
-  opacity: .90;
+  background: no-repeat url("./images/bc-100.png") 50% / 100%;
+  /*background-size: 100px 100px;*/
+  /*background-image: url("./images/bc-100.png");*/
+  /*opacity: .90;*/
+  border: 1px solid red;
   transition:0.2s ease-in-out;
-
-
-}
+  }
 .normal img {
+  vertical-align: top;
+  width: 100%;
   opacity: 0;
-  background-size: cover;
+  /*background-size: cover;*/
   transition:0.2s ease-in-out;
 }
 
@@ -94,6 +98,9 @@ div[id^="tile"]:hover {
 header, footer {
   display: block;
   text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 40px;
   margin: 4px;
   padding: 5px;
   min-height: 50px;
@@ -118,7 +125,7 @@ header, footer {
   text-transform: uppercase;
   /*display: none;*/
 }
-#timer, #matches {
+#timer, #matches, #guessses {
   margin-top: 30px;
   margin-bottom: 30px;
   color: red;
