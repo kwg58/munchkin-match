@@ -1,0 +1,130 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+body {
+  font-family: Droid Sans;
+  background-color: yellow;
+}
+#main {
+  min-height: 450px;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-flow: row;
+}
+#main > .left {
+  margin: 4px;
+  padding: 5px;
+  /*border: 1px solid #8888bb;
+  border-radius: 7pt;*/
+  /*background: #ccccff;*/
+  flex: 1 6 20%;
+  order: 1;
+  /*border: 1px solid black;*/
+}
+#main > .center {
+  margin: 4px;
+  padding: 5px;
+  /*border: 1px solid #cccc33;
+  border-radius: 7pt;*/
+  /*background: #dddd88;*/
+  flex: 3 1 50%;
+  order: 2;
+  /*border: 1px solid red;*/
+}
+#main > .right {
+  margin: 4px;
+  padding: 5px;
+  /*border: 1px solid #8888bb;
+  border-radius: 27pt;*/
+  /*background: #ccccff;*/
+  flex: 1 6 30%;
+  order: 3;
+  /*border: 1px solid red;*/
+  text-align: center;
+}
+#main > .center > .pics {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  /*flex-basis: 450px;*/
+  width: 450px;
+  height: 450px;
+  /*border: 1px solid blue;*/
+  /*margin: 10px;*/
+}
+
+
+
+
+.normal {
+  background-image: url("./images/bc-100.png");
+  opacity: .90;
+  transition:0.2s ease-in-out;
+
+
+}
+.normal img {
+  opacity: 0;
+  background-size: cover;
+  transition:0.2s ease-in-out;
+}
+
+/*.active {
+  opacity: 1;
+  background-image: url(gg2-100.jpg);
+  background-size: cover;
+  opacity: 0;
+  transition:0.2s ease-in-out;
+}*/
+
+.normal:hover {
+  cursor: pointer;
+}
+
+div[id^="tile"]:hover {
+    cursor: pointer;
+}
+
+.matched img {
+  opacity: 0;
+  background-image: url();
+}
+
+
+header, footer {
+  display: block;
+  text-align: center;
+  margin: 4px;
+  padding: 5px;
+  min-height: 50px;
+  border: 1px solid #eebb55;
+  border-radius: 7pt;
+  background: #ffeebb;
+  border: 1px solid black;
+}
+#reset {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 20px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  /*display: none;*/
+}
+#timer, #matches {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: red;
+  text-align: center;
+  font-size: 30px;
+  border: none;
+  display: block;
+  text-decoration: none;
+}
