@@ -18,7 +18,7 @@ body {
   /*border: 1px solid #8888bb;*/
   /*border-radius: 7pt;*/
   /*background: #ccccff;*/
-  flex: 1 6 20%;
+  flex: 1 6 35%;
   order: 1;
   /*border: 1px solid black;*/
 }
@@ -28,7 +28,7 @@ body {
   /*border: 1px solid #cccc33;*/
   /*border-radius: 7pt;*/
   /*background: #dddd88;*/
-  flex: 3 1 50%;
+  flex: 3 1 35%;
   order: 2;
   /*border: 1px solid red;*/
 }

@@ -1,0 +1,1 @@
+background: url("./images/emeraldcity.jpg") no-repeat cover, rgba(255,255,255,0.4)};
