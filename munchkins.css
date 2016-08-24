@@ -1,7 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans);
 body {
   font-family: Droid Sans;
-  background-color: yellow;
+  background-image: url("./images/emeraldcity.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 #main {
   min-height: 450px;
@@ -28,7 +30,7 @@ body {
   /*background: #dddd88;*/
   flex: 3 1 50%;
   order: 2;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 }
 #main > .right {
   margin: 4px;
@@ -104,10 +106,10 @@ header, footer {
   margin: 4px;
   padding: 5px;
   min-height: 50px;
-  border: 1px solid #eebb55;
-  border-radius: 7pt;
-  background: #ffeebb;
-  border: 1px solid black;
+  /*border: 1px solid #eebb55;*/
+  /*border-radius: 7pt;*/
+  /*background: #ffeebb;*/
+  /*border: 1px solid black;*/
 }
 #reset {
   background-color: #4CAF50; /* Green */
@@ -125,7 +127,10 @@ header, footer {
   text-transform: uppercase;
   /*display: none;*/
 }
-#timer, #matches, #guessses {
+#reset > .hidden {
+  opacity: 0;
+}
+#timer, #matches, #guesses {
   margin-top: 30px;
   margin-bottom: 30px;
   color: red;

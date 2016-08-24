@@ -33,9 +33,13 @@ $( document ).ready(function() {
   //event handler for reset button clicking
     $("#reset").on("click", function() {
       gameStarted = true;
+      guesses=0;
+      matches=0
+      $("#matches").text("");
+      $("#guesses").text("");
       // $(this).innerHTML= "Play Again";
       buildBoard();
-      startGame();
+      // startGame();
     })
 });
 
@@ -65,10 +69,13 @@ function startGame() {
   gameStarted = true;
   tileClicked = false;    // prevents this from being run on next click
   seconds = 0;        // reset to 0 for timer
+  minutes = 0;
   clickedTiles = [];   // blank array stores names of clicked images
   openCells=[];        // blank array stores cell numbers of clicked images
   matches=0;           // used to count matches, game wins when set to 8
   $("#matches").text("");
+  guesses=0;
+  $("guesses").text("");
   startTimer();
 }
 
@@ -81,16 +88,19 @@ function tileClick(cellID) {
   $("#" + cellID).toggleClass("active normal");
   openTiles = clickedTiles.push(imgArray[pointers[cellNum]]);
   // pushFile = clickedTiles[pointers[cellNum]];
-  console.log("pushFile");
+  console.log("pushFile");    // update match display
+
   if (openTiles === 2)  {
     console.log(clickedTiles);
+    guesses += 1;
+    $("#guesses").text(guesses + " guesses");
     if (clickedTiles[0] === clickedTiles[1]) {   // check to see if file names match
       matches += 1;     // update match count
         console.log("matches" + matches);
       $("#matches").text(matches + " matches");     // update match display
       setTimeout(freezeOpenTiles, 2000);
       if (matches == 8) {                // if we have 8 matches we win!
-        gameWon();
+        setTimeout(gameWon, 3000);
       }
       openTiles = 0;
       clickedTiles = [];
